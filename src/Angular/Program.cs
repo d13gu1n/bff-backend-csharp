@@ -19,7 +19,7 @@ app.UseStaticFiles();
 
 
 app.UseAuthentication();
-app.useAuthorization();
+app.UseAuthorization();
 
 app.MapReverseProxy();
 app.MapEndpoints(builder.Configuration);

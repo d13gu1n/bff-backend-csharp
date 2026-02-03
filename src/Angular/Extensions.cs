@@ -18,7 +18,7 @@ public static class Extensions
 
                 options.Events.OnRedirectToAccessDenied = context =>
                 {
-                    context.Response.StatusCore = 403;
+                    context.Response.StatusCode = 403;
                     return Task.CompletedTask;
                 };
             });

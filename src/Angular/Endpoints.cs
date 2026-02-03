@@ -19,6 +19,7 @@ public static class Endpoints
         {
             var client = httpClientFactory.CreateClient();
             var baseAddress = config["ApiHost:Url"];
+            Console.Write(baseAddress);
             var response = await client.PostAsJsonAsync($"{baseAddress}/api/token", request);
 
             if (response.IsSuccessStatusCode)
