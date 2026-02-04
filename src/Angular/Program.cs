@@ -1,4 +1,3 @@
-
 using Angular;
 
 var builder = WebApplication.CreateBuilder(args);

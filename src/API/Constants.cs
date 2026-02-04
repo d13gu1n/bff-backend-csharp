@@ -1,4 +1,4 @@
-namespace Api;
+namespace API;
 
 public static class Constants
 {
