@@ -27,10 +27,10 @@ export class AuthenticationService {
   }
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post("local-login", { username, password })
+    return this.http.post('local-login', { username, password })
       .pipe(
         catchError(error => {
-          console.error("Error en la solicitud de inicio de sesión:", error);
+          console.error('Error en la solicitud de inicio de sesión:', error);
           throw error;
         }),
         tap((response: any) => {
@@ -40,9 +40,9 @@ export class AuthenticationService {
   }
 
   logout() {
-    this.http.post("local-logout", {}).subscribe(result => {
-      localStorage.removeItem("user");
-      window.location.href = "/login";
+    this.http.post('local-logout', {}).subscribe(result => {
+      localStorage.removeItem('user');
+      window.location.href = '/login';
     });
   }
 }
